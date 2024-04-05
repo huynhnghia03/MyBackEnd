@@ -1,0 +1,34 @@
+.user_avatar {
+  width: 50px;
+  height: 25x;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.checkbox-select-all-options {
+  width: 135px;
+  margin-right: 16px;
+}
+
+.search-live-data {
+  width: 30%;
+  padding-top: 2px;
+  margin-bottom: 0rem !important;
+  margin-left: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form-group.invalid .form-control {
+  border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+  color: #f33a58;
+}
+
+.form-control:hover {
+  border-color: #1dbfaf;
+}

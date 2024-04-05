@@ -1,0 +1,16 @@
+const express = require('express')
+const router = express.Router()
+const AdminController = require('../app/controllers/AdminController')
+const { verifyToken, checkAdmin } = require('../app/middleware/verifymidelware')
+
+router.get('/allTopics', verifyToken, checkAdmin, AdminController.getAllTopicsAdmin)
+router.get('/allCourse/:slug', verifyToken, checkAdmin, AdminController.getListCourse)
+router.put('/edit/:id', verifyToken, checkAdmin, AdminController.edit)
+router.put('/addcourse/:slug', verifyToken, checkAdmin, AdminController.addCourse)
+router.delete('/deletecourse/:id', verifyToken, checkAdmin, AdminController.destroyCourse)
+router.get('/topicDetail/:id', verifyToken, checkAdmin, AdminController.getDetailTopic)
+router.get('/courseDetail/:id', verifyToken, checkAdmin, AdminController.getDetailCourse)
+router.post('/addTopic', verifyToken, checkAdmin, AdminController.addTopic)
+router.put('/:id/edit', verifyToken, checkAdmin, AdminController.editTopic)
+router.delete('/:id/delete', verifyToken, checkAdmin, AdminController.destroyTopic)
+module.exports = router
