@@ -5,7 +5,6 @@ const methodOverride = require('method-override')
 const cors = require('cors')
 const cookiParser = require('cookie-parser')
 require('dotenv').config()
-// const bodyParser = require('body-parser')
 const cookieSession = require('cookie-session')
 const passport = require("passport");
 require('./app/Oauth/passport.js')
